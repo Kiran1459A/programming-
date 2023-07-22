@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="copy2.css">
+    <title>Music App</title>
+</head>
+
+<body>
+<header>
+    <div class="menu_side">
+        <h1>Playlist</h1>
+        <div class="playlist">
+            <h4 ><span></span><i class="bi bi-music-note-beamed"></i> Home</h4>
+            <h4 class="active"><span></span><i class="bi bi-music-note-beamed"></i> Playlist</h4>
+            
+        </div>
+        <div class="menu_song">
+            <li class="songItem">
+                <span>01</span>
+                <img src="C:\Users\vikram koda\Music\11\img\1.jpg" alt="Alan">
+                <h5>
+                    On My Way
+                    <div class="subtitle">Alan Walker</div>
+                </h5>
+                    <i class="bi playListPlay bi-play-circle-fill" id="1"></i>
+            </li>
+            <li class="songItem">
+                <span>02</span>
+                <img src="C:\Users\vikram koda\Music\11\img\2.jpg" alt="Alan">
+                <h5>
+                    On My Way
+                    <div class="subtitle">Alan Walker</div>
+                </h5>
+                    <i class="bi playListPlay bi-play-circle-fill" id="2"></i>
+            </li>
+            <li class="songItem">
+                <span>03</span>
+                <img src="C:\Users\vikram koda\Music\11\img\3.jpg" alt="Alan">
+                <h5>
+                    On My Way
+                    <div class="subtitle">Alan Walker</div>
+                </h5>
+                    <i class="bi playListPlay bi-play-circle-fill" id="3"></i>
+            </li>
+            <li class="songItem">
+                <span>04</span>
+                <img src="C:\Users\vikram koda\Music\11\img\4.jpg" alt="Alan">
+                <h5>
+                    On My Way
+                    <div class="subtitle">Alan Walker</div>
+                </h5>
+                    <i class="bi playListPlay bi-play-circle-fill" id="4"></i>
+            </li>
+            <li class="songItem">
+                <span>05</span>
+                <img src="C:\Users\vikram koda\Music\11\img\5.jpg" alt="Alan">
+                <h5>
+                    On My Way
+                    <div class="subtitle">Alan Walker</div>
+                </h5>
+                    <i class="bi playListPlay bi-play-circle-fill" id="5"></i>
+            </li>
+            <li class="songItem">
+                <span>06</span>
+                <img src="C:\Users\vikram koda\Music\11\img\6.jpg" alt="Alan">
+                <h5>
+                    On My Way
+                    <div class="subtitle">Alan Walker</div>
+                </h5>
+                    <i class="bi playListPlay bi-play-circle-fill" id="6"></i>
+            </li>
+        </div>
+    </div>
+
+
+    <div class="song_side">
+        <nav>
+            <ul>
+                <li><a href="C:\Users\vikram koda\Music\11\index.html" style="color: #bdc1ce; text-decoration: none;">Discover </a></li>
+                <li>MY LIBRARY <span></span></li>
+            
+            </ul>
+            <button class="btn"><b style="font-size: medium;">Log in </b></button>
+            
+        </nav>
+       <!--image slider start-->
+    
+    <div class="slider">
+        <div class="slides">
+          <!--radio buttons start-->
+          <input type="radio" name="radio-btn" id="radio1">
+          <input type="radio" name="radio-btn" id="radio2">
+          <input type="radio" name="radio-btn" id="radio3">
+          <input type="radio" name="radio-btn" id="radio4">
+          <!--radio buttons end-->
+          <!--slide images start-->
+          <div class="slide first">
+            <img src="C:\Users\vikram koda\Music\11\bg - Copy.png" alt="" onclick="location='Playlist1.html'">
+          </div>
+          <div class="slide">
+            <img src="C:\Users\vikram koda\Music\11\img\2.jpg" alt="" onclick="location='Playlist2.html'">
+          </div>
+          <div class="slide">
+            <img src="C:\Users\vikram koda\Music\11\img\3.jpg" alt="" onclick="location='Playlist3.html'">
+          </div>
+          <div class="slide">
+            <img src="C:\Users\vikram koda\Music\11\img\4.jpg" alt="" onclick="location='Playlist4.html'">
+          </div>
+          <!--slide images end-->
+          <!--automatic navigation start-->
+          <div class="navigation-auto">
+            <div class="auto-btn1"></div>
+            <div class="auto-btn2"></div>
+            <div class="auto-btn3"></div>
+            <div class="auto-btn4"></div>
+          </div>
+          <!--automatic navigation end-->
+        </div>
+        <!--manual navigation start-->
+        <div class="navigation-manual">
+          <label for="radio1" class="manual-btn"></label>
+          <label for="radio2" class="manual-btn"></label>
+          <label for="radio3" class="manual-btn"></label>
+          <label for="radio4" class="manual-btn"></label>
+        </div>
+        <!--manual navigation end-->
+      </div>
+      <!--image slider end-->
+  
+      <script type="text/javascript">
+      var counter = 1;
+      setInterval(function(){
+        document.getElementById('radio' + counter).checked = true;
+        counter++;
+        if(counter > 4){
+          counter = 1;
+        }
+      }, 5000);
+      </script>
+        
+         <h2 style="padding-top: 2%;">Spotify Playlist</h2>
+         
+        <div class="fon">
+         <div><img src="C:\Users\vikram koda\Music\11\img\2.jpg" style="height: 200px; width: 200px; display: flex; flex-direction: column;" onclick="location='Playlist2.html'" >Top Trending</div>
+        <div> <img src="C:\Users\vikram koda\Music\11\img\3.jpg" style="height: 200px; width: 200px; display: flex; flex-direction: column;" onclick="location='Playlist3.html'" >Romantic Songs</div>
+         <div><img src="C:\Users\vikram koda\Music\11\img\4.jpg" style="height: 200px; width: 200px; display: flex; flex-direction: column;" onclick="location='Playlist4.html'" >Hit Songs</div>
+         <div><img src="C:\Users\vikram koda\Music\11\img\5.jpg" style="height: 200px; width: 200px; display: flex; flex-direction: column;" onclick="location='Playlist5.html'">Attitude Songs</div>
+         <div><img src="C:\Users\vikram koda\Music\11\img\6.jpg" style="height: 200px; width: 200px; display: flex; flex-direction: column;" onclick="location='Playlist6.html'">Friendship songs </div>
+         <div ><img src="C:\Users\vikram koda\Music\11\5559852.jpg" style="height: 200px; width: 200px; display: flex; flex-direction: column; " onclick="location='Playlist1.html'" >Dj Songs</div>
+         <div><img src="C:\Users\vikram koda\Music\11\img\8.jpg" style="height: 200px; width: 200px; display: flex; flex-direction: column;"  onclick="location='Playlist7.html'">All Time Favourite</div>
+         <div><img src="C:\Users\vikram koda\Music\11\img\9.jpg" style="height: 200px; width: 200px; display: flex; flex-direction: column;"  onclick="location='Playlist8.html'">English Songs</div>
+        </div>
+        
+</div>
+
+    
+
+</header>
+    <script src="app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,425 @@
+/* Google Font 'Poppins'  */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+* {
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background-color: #131312;
+    font-family: 'Poppins' , sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header {
+    width: 100%;
+    height: 100%;
+    /* border: 1px solid #fff; */
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+
+header .menu_side, .song_side {
+    position: relative;
+    width: 25%;
+    height: 90%;
+    /* border: 1px solid #fff; */
+    background-color: #111727;
+    box-shadow: 5px 0px 2px #090f1f;
+    color: #fff;
+}
+
+header .song_side {
+    width: 75%;
+    height: 90%;
+    background: #0b1320;
+    overflow: auto;
+    scrollbar-width:  none;
+    
+}
+header .song_side::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    background: transparent;
+}
+
+header .master_play {
+    width: 100%;
+    height: 10%;
+    background: #111727;
+    box-shadow: 0px 3px 8px #090f1f;
+}
+
+header .menu_side h1 {
+    font-size: 20px;
+    margin: 15px 0px 0px 20px;
+    font-weight: 500;
+}
+
+header .menu_side .playlist {
+    margin:  40px 0px 0px 20px;
+}
+
+header .menu_side .playlist h4 {
+    font-size: 14px;
+    font-weight: 400;
+    padding-bottom: 10px;
+    color: #4c5262;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: .3s linear;
+}
+header .menu_side .playlist h4:hover {
+    color: #fff;
+}
+header .menu_side .playlist h4 span{
+    position: relative;
+    margin-right: 35px;
+}
+header .menu_side .playlist h4 span::before{
+    content: '';
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    border: 2px solid #4c5262;
+    border-radius: 50%;
+    top: -4px;
+    transition: .3s linear;
+}
+header .menu_side .playlist h4:hover span::before{
+    border: 2px solid #fff;
+}
+header .menu_side .playlist h4 .bi{
+    display: none;
+}
+header .menu_side .playlist .active{
+    color: #36e2ec;
+}
+header .menu_side .playlist .active span{
+    display: none;
+}
+header .menu_side .playlist .active .bi{
+    display: flex;
+    margin-right: 20px;
+}
+header .menu_side .menu_song {
+    width: 100%;
+    height: 300px;
+    /* border: 1px solid #fff; */
+    margin-top: 40px;
+}
+header .menu_side .menu_song li{
+    position: relative;
+    list-style-type: none;
+    padding: 5px 0px 5px 20px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: .3s linear;
+}
+header .menu_side .menu_song li:hover{
+    background: rgb(105, 105, 170,.1);
+}
+header .menu_side .menu_song li span{
+    font-size: 12px;
+    font-weight: 600;
+    color: #4c5262;
+}
+header .menu_side .menu_song li img{
+    width: 32px;
+    height: 32px;
+    margin-left: 25px;
+}
+header .menu_side .menu_song li h5{
+    font-size: 11px;
+    margin-left: 15px;
+}
+header .menu_side .menu_song li h5 .subtitle{
+    font-size: 9px;
+    color: #4c5262;
+}
+header .menu_side .menu_song li .bi{
+    position: absolute;
+    right: 15px;
+    top: 6px;
+    font-size: 16px;
+}
+
+
+ header .song_side {
+     z-index: 2;
+ }
+ header .song_side::before{
+     content: '';
+     position: absolute;
+     width: 100%;
+     height: 320px;
+     
+     background-color: #05059c;
+     
+     z-index: -1;
+ }
+ header .song_side nav{
+    width: 100%;
+    height: 10%;
+    margin: auto;
+    padding: 2%;
+    background: linear-gradient(to bottom, #063880 0%, #535380 100%);
+    /* border: 1px solid #fff; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+ }
+ header .song_side nav ul{
+    display: flex;
+ }
+ header .song_side nav ul li{
+    position: relative;
+    list-style-type: none;
+    font-size: 13px;
+    color: #bdc1ce;
+    margin-right: 25px;
+    cursor: pointer;
+    transition: .3s linear;
+ }
+ header .song_side nav ul li:hover{
+   color: #fff;
+ }
+ header .song_side nav ul li:nth-child(1){
+   color: #fff;
+ }
+ header .song_side nav ul li span{
+   position: absolute;
+   width: 100%;
+   height: 2.5px;
+   background: #36e2ec;
+   bottom: -5px;
+   left: 0;
+   border-radius: 20px;
+ }
+ header .song_side nav .search{
+   position: relative;
+   border: 1px solid black;
+   width: 40%;
+   padding: 1px 10px;
+   border-radius: 20px;
+   color: gray;
+ }
+ header .song_side nav .search::before{
+     content: '';
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   border-radius: 20px;
+   background: rgb(184, 184, 184,.1);
+   backdrop-filter: blur(5px);
+   z-index: -1;
+ }
+ header .song_side nav .search .bi{
+    font-size: 13px;
+    padding: 3px 0px 0px 10px;
+ }
+ header .song_side nav .search input{
+    background: none;
+    outline: none;
+    border: none;
+    padding: 0px 10px;
+    color: #fff;
+    font-size: 12px;
+ }
+ #searchInput {
+    width: 200px;
+    padding: 5px;
+  }
+  
+  #songList li {
+    display: none;
+  }
+   #songList li.show {
+    display: block;
+  }
+
+ header .song_side nav .user{
+    position: relative;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+ }
+ header .song_side nav .user img{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    box-shadow: 2px 2px 8px #131312;
+ }
+
+header .song_side .btn{
+    padding:4%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    
+    border-radius: 15px 15px 15px; 
+    
+}
+header .song_side .fon{
+    display: grid;
+     grid: auto auto / auto auto auto auto;
+    grid-gap: 10px;
+    background-color: rgb(31, 32, 31);
+    padding: 10px;
+
+}header .song_side .fon img{
+  padding: 4%;
+    padding-left: 2%;}
+
+ 
+ header .song_side .title{
+    display:flex;
+    
+     padding: 0%;
+    justify-content: space-between;
+
+ }
+ header .song_side .title h4{
+   
+    padding: 6%;
+     padding-top: 4%;
+   padding-bottom: 2%;
+   
+
+ }
+ header .song_side .songItem1 {
+     display: flex;
+     padding-bottom: 2%;
+    padding-left: 7%;
+    padding-right: 7%;
+     justify-content: space-between;
+
+ }
+header .song_side .Banner_name .Banner{
+   height: 240px;
+   width: 270px;
+   padding: 3%;
+   
+   
+   padding-top: 1%;
+}
+header .song_side .Banner_name{
+    display: flex;
+    
+
+}
+.slider{
+    width: 960px;
+    height: 240px;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .slides{
+    width: 500%;
+    height: 240px;
+    display: flex;
+  }
+  
+  .slides input{
+    display: none;
+  }
+  
+  .slide{
+    width: 20%;
+    transition: 2s;
+  }
+  
+  .slide img{
+    width: 960px;
+    height: 240px;
+  }
+  
+  /*css for manual slide navigation*/
+  
+  .navigation-manual{
+    position: absolute;
+    width: 960px;
+    margin-top: -40px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .manual-btn{
+    border: 2px solid #40D3DC;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+  }
+  
+  .manual-btn:not(:last-child){
+    margin-right: 40px;
+  }
+  
+  .manual-btn:hover{
+    background: #40D3DC;
+  }
+  
+  #radio1:checked ~ .first{
+    margin-left: 0;
+  }
+  
+  #radio2:checked ~ .first{
+    margin-left: -20%;
+  }
+  
+  #radio3:checked ~ .first{
+    margin-left: -40%;
+  }
+  
+  #radio4:checked ~ .first{
+    margin-left: -60%;
+  }
+  
+  /*css for automatic navigation*/
+  
+  .navigation-auto{
+    position: absolute;
+    display: flex;
+    width: 960px;
+    justify-content: center;
+    margin-top:200px;
+  }
+  
+  .navigation-auto div{
+    border: 2px solid #40D3DC;
+    padding: 5px;
+    border-radius: 10px;
+    transition: 1s;
+  }
+  
+  .navigation-auto div:not(:last-child){
+    margin-right: 40px;
+  }
+  
+  #radio1:checked ~ .navigation-auto .auto-btn1{
+    background: #40D3DC;
+  }
+  
+  #radio2:checked ~ .navigation-auto .auto-btn2{
+    background: #40D3DC;
+  }
+  
+  #radio3:checked ~ .navigation-auto .auto-btn3{
+    background: #40D3DC;
+  }
+  
+  #radio4:checked ~ .navigation-auto .auto-btn4{
+    background: #40D3DC;
+  }
